@@ -1,0 +1,293 @@
+@import ../../css/global
+
+
+.tiles-container
+  //position: absolute
+  position: relative
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 0
+  margin: 0
+  overflow-y: hidden
+  background-color: $off-white
+  //min-height: 44rem
+  .tile[hasFooter]
+    .inner
+      margin: 3px 3px 0 3px
+    .tile-bottom
+      padding: 0.5rem
+      font-size: 0.75rem
+      height: 1rem
+      margin: 0 3px 3px 3px
+      font-weight: 600
+      core-icon
+        margin-top: -5px
+  .tile
+    float: left
+    position: relative
+    vertical-align: top
+    will-change: transform
+    background-color: $off-white
+    .inner
+      background-color: #fff
+      margin: 3px
+      .centered
+        display: flex
+        justify-content: center
+        align-items: center
+        .centered-inner
+          display: block
+          height: auto
+  .tile:nth-of-type(1)
+    width: calc(100% / 5 * 2)
+    //height: calc(100% / 4)
+    height: 12rem
+    .inner
+      .centered
+        .centered-inner
+          text-align: center
+          paper-progress
+            margin: 0.5rem 0
+  .tile:nth-of-type(2)
+    width: calc(100% / 5 * 2)
+    //height: calc(100% / 2)
+    height: 24rem
+    .inner
+      padding: 10px 10px 0 10px
+      background-color: #fff
+  .tile:nth-of-type(3)
+    width: calc(100% / 5)
+    //height: calc(100% / 4)
+    height: 12rem
+    .inner
+      background-image: url(../../css/img/dad-and-child.jpg)
+      background-size: cover
+      .centered
+        .centered-inner
+          max-width: 85%
+          text-align: center
+          color: #fff
+          font-size: 1rem
+          font-weight: 300
+  .tile:nth-of-type(4)
+    width: calc(100% / 5)
+    //height: calc(100% / 4)
+    height: 12rem
+    .inner
+      padding: 10px 10px 0 10px
+      paper-progress
+        width: 90%
+      .sub-header
+        padding: 0.5rem 0
+  .tile:nth-of-type(5)
+    position: absolute
+    //top: calc(100% / 4)
+    top: 12rem
+    width: calc(100% / 5 * 2)
+    //height: calc(100% / 4)
+    height: 12rem
+    color: #fff
+    .inner
+      padding: 10px 10px 0 10px
+      color: #fff
+      custom-icon
+        width: 2.5rem
+        height: 2.5rem
+      span, div
+        font-weight: 500
+      p
+        font-size: 0.83em
+        margin: 0.5rem 0 0 0
+        line-height: 1rem
+      p:nth-of-type(1)
+        margin: 1rem 0 0 0
+
+  .tile:nth-of-type(6)
+    width: calc(100% / 5 * 3)
+    //height: calc(100% / 2)
+    height: 23rem
+    .inner
+      padding: 10px
+  .tile:nth-of-type(7)
+    width: calc(100% / 5 * 2)
+    //height: calc(100% / 2)
+    height: 23rem
+    ul
+      list-style: none
+      display: block
+      li
+        color: $dark-grey
+        position: relative
+        padding: 0 0 0.25rem 1.25rem
+        font-size: 0.75rem
+        &:before
+          content: ''
+          position: absolute
+          top: 0.05rem
+          left: 0
+          width: 10px
+          height: 10px
+      li:nth-of-type(1)
+        &:before
+          background-color: #23a0e2
+      li:nth-of-type(2)
+        &:before
+          background-color: #198bc7
+      li:nth-of-type(3)
+        &:before
+          background-color: #157db0
+      li:nth-of-type(4)
+        &:before
+          background-color: #0c5f89
+
+.tiles-container.tablet.mobile
+  position: relative
+  overflow: auto
+  height: auto
+  width: 100%
+  .tile
+    width: 100%
+  .tile:nth-of-type(1), .tile:nth-of-type(2), .tile:nth-of-type(3), .tile:nth-of-type(4), .tile:nth-of-type(5), .tile:nth-of-type(6), .tile:nth-of-type(7)
+    width: 100%
+    height: auto
+    position: relative
+  .tile:nth-of-type(1)
+    height: 10rem
+  .tile:nth-of-type(2)
+    height: 21rem
+  .tile:nth-of-type(3)
+    height: 20rem
+  .tile:nth-of-type(4)
+    height: 10rem
+  .tile:nth-of-type(5)
+    height: 10rem
+  .tile:nth-of-type(6)
+    height: 25rem
+  .tile:nth-of-type(7)
+    height: 25rem
+
+.tiles-container.tablet
+  overflow: auto
+  height: 100%
+  width: 100%
+  .tile
+    width: 50%
+  .tile:nth-of-type(1), .tile:nth-of-type(3), .tile:nth-of-type(4), .tile:nth-of-type(5), .tile:nth-of-type(6), .tile:nth-of-type(7)
+    width: 50%
+  .tile:nth-of-type(1)
+
+  .tile:nth-of-type(2)
+    width: 100%
+  .tile:nth-of-type(3), .tile:nth-of-type(4)
+    height: 15rem
+  .tile:nth-of-type(5)
+    top: 0
+    right: 0
+    span
+      font-weight: 500
+    p
+      font-size: 0.7rem
+    p:nth-of-type(1)
+      display: none
+  .tile:nth-of-type(6), .tile:nth-of-type(7)
+    width: 100%
+
+
+table.transactions
+  tbody
+    tr
+      td:nth-of-type(1)
+        color: $mid-grey
+      td:nth-of-type(2)
+        color: $dark-grey
+      td:nth-of-type(3)
+        color: $mid-grey
+      td:nth-of-type(4)
+        color: $red
+
+table.purchase-analyser
+  tbody
+    tr
+      td
+        vertical-align: top
+      td:nth-of-type(1)
+        color: $dark-grey
+      td:nth-of-type(2)
+        color: $green
+        white-space: nowrap
+      td:nth-of-type(3)
+        color: $red
+        white-space: nowrap
+      td:nth-of-type(4)
+        color: $red
+        white-space: nowrap
+      td:nth-of-type(5)
+        color: $dark-grey
+      td:nth-of-type(6)
+        color: $blue
+
+table.expense-eliminator
+  tbody
+    tr
+      td:nth-of-type(1)
+        span
+          color: $green
+          float: right
+      td:nth-of-type(2)
+        color: $dark-grey
+        span
+          color: $mid-grey
+          text-decoration: line-through
+      td:nth-of-type(3)
+        color: $green
+      td:nth-of-type(4)
+        color: $red
+    tr:last-child
+      td:nth-of-type(1)
+        color: $dark-grey
+        text-align: right
+        font-size: 1rem
+      td:nth-of-type(2)
+        color: $green
+      td:nth-of-type(3)
+        color: $red
+
+paper-progress
+  margin: 0
+  display: block
+  clear: both
+  height: 8px
+  border: 1px solid transparent
+
+paper-progress::shadow #activeProgress
+  background-color: $green
+  border: 1px solid transparent
+  border-radius: 4px
+paper-progress::shadow #progressContainer
+  background-color: $pale-grey
+  border: 1px solid transparent
+  border-radius: 4px
+
+paper-checkbox.blue::shadow #checkbox
+  border-color: #e1e0e5
+  #ink[checked]
+    color: #4285f4
+
+paper-checkbox.blue::shadow #checkbox.checked
+  border-color: #4285f4
+
+paper-fab
+  background-color: $pale-grey
+
+.bottom
+  .info
+    display: flex
+    justify-content: center
+    align-items: center
+    paper-fab
+      position: absolute
+      right: 1.5rem
+      top: -1.5rem
+      color: $dark-grey

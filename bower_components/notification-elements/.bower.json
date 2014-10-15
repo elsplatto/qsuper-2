@@ -1,0 +1,19 @@
+{
+  "name": "notification-elements",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#>=0.4.0 <1.0.0"
+  },
+  "homepage": "https://github.com/PolymerLabs/notification-elements",
+  "version": "0.4.0",
+  "_release": "0.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.4.0",
+    "commit": "7919557e00faabe6c46470c788062a30b13841de"
+  },
+  "_source": "git://github.com/PolymerLabs/notification-elements.git",
+  "_target": "~0.4.0",
+  "_originalSource": "PolymerLabs/notification-elements",
+  "_direct": true
+}

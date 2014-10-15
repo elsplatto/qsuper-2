@@ -1,0 +1,137 @@
+$dark-grey: #2d3340
+$mid-grey: #9b9b9b
+$light-grey: #e1e0e6
+$red: #e51c23
+$pale-grey: #e1e0e6
+$lime-green: #cddc39
+$green: #7cb342
+$pale-red: #f37a70
+$blue: #03a9f4
+$dark-blue: #0288d1
+$darker-blue: #01579b
+$light-blue: #4fc3f7
+$light-cyan: #84ffff
+$yellow: #ffeb3b
+$light-orange: #fb8c00
+$orange: #e65100
+$purple: #673ab7
+$off-white: #f7f6fb
+
+html, body
+  font-family: 'Museo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-size: 100%
+  height: 100%
+  -webkit-font-smoothing: antialiased
+
+.yellow-theme
+  background-color: $yellow
+  color: #fff
+
+.white-theme
+  background-color: #fff
+
+.light-blue-theme
+  background-color: $light-blue
+
+.blue-theme
+  background-color: $blue
+  color: #fff
+  h3
+    margin: 0
+    padding: 0
+    font-weight: 400
+    font-size: 1.5rem
+
+.lime-green-theme
+  background-color: $green
+  color: #fff
+  h3
+    margin: 0
+    padding: 0
+    font-weight: 400
+    font-size: 1.5rem
+
+.orange-theme
+  background-color: $orange
+  color: #fff
+
+.light-orange-theme
+  background-color: $light-orange !important
+  color: #fff
+
+table
+  margin-top: 1rem
+  width: 100%
+  thead
+    tr
+      th
+        margin: 0
+        border-bottom: 2px solid $pale-grey
+        text-align: left
+        font-size: 0.7rem
+        font-weight: 300
+        color: $mid-grey
+        padding: 0 0 0.25rem 0
+      .date
+        width: 20%
+      .bill
+        width: 60%
+      .amount
+        width: 20%
+      .description
+        width: 25%
+      .category
+        width: 25%
+      .taxable
+        width: 10%
+
+  tbody
+    tr
+      td
+        font-size: 0.75rem
+        font-weight: 300
+        padding: 0.5rem 0.5rem 0.5rem 0
+        margin: 0
+        border-bottom: 1px solid $pale-grey
+      td:nth-of-type(1)
+        color: $mid-grey
+      td:nth-of-type(2)
+        color: $dark-grey
+      td:nth-of-type(3)
+        color: $red
+    tr:last-child
+      td
+        border-bottom: none
+
+
+
+
+.lime-green
+  color: $green
+.mid-grey
+  color: $mid-grey
+.dark-grey
+  color: $dark-grey
+.pale-grey
+  color: $pale-grey
+.italic
+  font-style: italic
+
+.xlarge-text
+  font-size: 2.5rem
+.large-text
+  font-size: 1.25rem
+.medium-text
+  font-size: 1rem
+.medium-small-text
+  font-size: 0.83rem
+.small-text
+  font-size: 0.75rem
+.xsmall-text
+  font-size: 0.5rem
+
+.thin
+  font-weight: 300
+
+.right
+  float: right

@@ -1,0 +1,123 @@
+<link href="../core-header-panel/core-header-panel.html" rel="import">
+<link href="../core-toolbar/core-toolbar.html" rel="import">
+<link href="../core-drawer-panel/core-drawer-panel.html" rel="import">
+<link href="../core-selector/core-selector.html" rel="import">
+<link href="../core-media-query/core-media-query.html" rel="import">
+
+<link rel="import" href="../core-icons/core-icons.html">
+<link rel="import" href="../core-icon-button/core-icon-button.html">
+<link rel="import" href="../paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../core-icons/av-icons.html">
+
+<link rel="import" href="../core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../core-animated-pages/transitions/slide-up.html">
+<link rel="import" href="../core-animated-pages/transitions/scale-up.html">
+<link rel="import" href="../core-animated-pages/transitions/tile-cascade.html">
+
+<link href="../daily-view/daily-view.html" rel="import">
+
+
+<polymer-element name="qsuper-app">
+    <template>
+        <link rel="stylesheet" href="qsuper-app.css" />
+        <core-drawer-panel id="sideMenu" class="{{tabletMatch ? 'tablet': ''}} {{mobileMatch ? 'mobile': ''}} {{secondaryNavVisible ? 'secondary' : ''}}" responsiveWidth="10000px">
+            <core-header-panel drawer>
+                <core-toolbar></core-toolbar>
+                <div class="drawer-nav">Drawer content</div>
+            </core-header-panel>
+            <core-header-panel id="mainHeaderPanel" mode="waterfall-tall" tallclass="waterfall-tall" main flex>
+                <div class="core-header">
+                    <div id="mainToolbar" class="toolbar">
+                        <div class="inner">
+                            <div class="logo-bar">
+                                <core-icon-button icon="menu" on-tap="{{togglePanel}}"></core-icon-button>
+                                <h1>QSuper</h1>
+                            </div>
+                            <header>
+                                <h2>{{pageTitle}}</h2>
+                            </header>
+                            <div class="utility-bar">
+                                <div class="notifications-holder">
+                                    <div class="notifications">
+                                        <span>5</span>
+                                    </div>
+                                    <div class="indicator"></div>
+                                </div>
+                                <div class="support"><a>Support</a></div>
+                                <div class="profile-holder">
+                                    <div class="profile-pic">
+                                        <img src="../../img/users/nicole-42x42.jpg" />
+                                    </div>
+                                    <a>Nicole Braidlin</a>
+                                    <core-icon icon="arrow-drop-down"></core-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<header>
+                            <h2>{{pageTitle}}</h2>
+                        </header>-->
+                    </div>
+                    <div class="primary-nav">
+                        <div class="inner">
+                            <ul>
+                                <core-selector id="primarySelector" on-core-activate="{{selectSecondary}}">
+                                    <li data-index="0"><a>Your Super</a><span></span></li>
+                                    <li data-index="1"><a>Your Finances</a><span></span></li>
+                                    <li data-index="2"><a>Investments</a><span></span></li>
+                                    <li data-index="3"><a>Add to Super</a><span></span></li>
+                                    <li data-index="4"><a>Accessing Super</a><span></span></li>
+                                    <li data-index="5"><a>Insurance</a><span></span></li>
+                                </core-selector>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="secondaryNav" class="secondary-nav">
+                        <div class="inner">
+                            <core-selector id="secondarySelector">
+                                <ul>
+                                    <li><a href="#">Secondary nav one</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Daily View</a></li>
+                                    <li><a href="#">Budgets &amp; Bills</a></li>
+                                    <li><a href="#">Savings &amp; Goals</a></li>
+                                    <li><a href="#">Investment &amp; Advice</a></li>
+                                    <li><a href="#">Portfolio</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Secondary nav three</a></li>
+                                </ul>
+                            </core-selector>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" flex>
+
+
+                    <daily-view tablet="{{tabletMatch}}" mobile="{{mobileMatch}}"></daily-view>
+
+
+
+                </div>
+            </core-header-panel>
+            <core-media-query query="max-width: 900px" queryMatches="{{tabletMatch}}"></core-media-query>
+            <core-media-query query="max-width: 640px" queryMatches="{{mobileMatch}}"></core-media-query>
+        </core-drawer-panel>
+    </template>
+    <script>
+        Polymer('qsuper-app',{
+            pageTitle: 'Daily View',
+            secondaryNavVisible: false,
+            togglePanel: function() {
+                this.$.sideMenu.togglePanel();
+            },
+            selectSecondary: function(event, detail, sender) {
+                this.$.secondaryNav.classList.add('show');
+                this.$.secondarySelector.selected = detail.item.getAttribute('data-index');
+                this.secondaryNavVisible = true;
+            }
+
+
+        });
+    </script>
+</polymer-element>

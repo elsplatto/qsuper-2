@@ -1,0 +1,212 @@
+
+<link href="../paper-checkbox/paper-checkbox.html" rel="import">
+<link href="../chart-elements/chart-doughnut.html" rel="import">
+<link rel="import" href="../paper-progress/paper-progress.html">
+
+<polymer-element name="daily-view" attributes="tablet mobile">
+    <template>
+        <link rel="stylesheet" href="daily-view.css" />
+        <div class="tiles-container {{tablet ? 'tablet' : ''}} {{mobile ? 'mobile' : ''}}" flex auto>
+            <div class="tile" layout vertical>
+                <div class="inner" flex vertical layout>
+
+                    <div class="centered" flex>
+                        <div class="centered-inner">
+                            <div id="fundsAvailable" class="xlarge-text lime-green thin centered">$250</div>
+                            <span class="mid-grey">available</span>
+                            <paper-progress value="70"></paper-progress>
+                            <span class="medium-small-text mid-grey">$350 of $600</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tile" layout vertical hasFooter>
+                <div class="inner" flex vertical layout hero hero-id="bills">
+                    <div flex>
+                        <span class="dark-grey medium-text">Bill Manager for October</span>
+                        <table cellspacing="0">
+                            <thead>
+                            <th class="date">Date</th>
+                            <th class="bill">Bill</th>
+                            <th class="amount">Amount</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>10 Oct</td>
+                                <td>Origin Gas</td>
+                                <td nowrap>-$320.00</td>
+                            </tr>
+                            <tr>
+                                <td>10 Oct</td>
+                                <td>Rent</td>
+                                <td nowrap>-$385.00</td>
+                            </tr>
+                            <tr>
+                                <td>14 Oct</td>
+                                <td>NRMA Insurance</td>
+                                <td nowrap>-$1,147.50</td>
+                            </tr>
+                            <tr>
+                                <td>17 Oct</td>
+                                <td>Rent</td>
+                                <td nowrap>-$385.00</td>
+                            </tr>
+                            <tr>
+                                <td>21 Oct</td>
+                                <td>Rent</td>
+                                <td nowrap>-$385.00</td>
+                            </tr>
+                            <tr>
+                                <td>28 Oct</td>
+                                <td>Rent</td>
+                                <td nowrap>-$385.00</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Total for October</td>
+                                <td nowrap>-$3007.50</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="blue-theme tile-bottom" page="1" hero-id="bills-footer" hero on-tap="{{transition}}">
+                    View all bills
+                    <core-icon class="right" icon="chevron-right"></core-icon>
+                </div>
+            </div>
+            <div class="tile" layout vertical>
+                <div class="inner" flex vertical layout>
+                    <div class="centered" flex>
+                        <div class="centered-inner">
+
+                            I need advice, without the fees.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tile" layout vertical hasFooter>
+                <div class="inner" flex vertical layout hero cross-fade hero-id="goals">
+                    <div flex>
+                        <div class="dark-grey medium-small-text" style="margin-bottom: 20px">Goals</div>
+                        <div class="sub-header dark-grey medium-text">Pay off credit card</div>
+                        <paper-progress value="97"></paper-progress>
+                        <span class="lime-green small-text">97% - nearly there</span>
+                        <!--div class="sub-header dark-grey medium-text">Home Deposit</div>
+                        <paper-progress value="15"></paper-progress>
+                        <span class="lime-green small-text">15%</span-->
+                    </div>
+                </div>
+                <div class="lime-green-theme tile-bottom" page="3" hero-id="goals-footer" hero on-tap="{{transition}}">
+                    Manage credit card
+                    <core-icon class="right" icon="chevron-right"></core-icon>
+                </div>
+            </div>
+            <div class="tile" layout vertical hasFooter>
+                <div class="inner light-orange-theme" flex vertical layout hero cross-fade hero-id="tips">
+                    <div>Top tips:</div>
+                    <div class="centered" flex>
+                        <core-icon class="icon-xlarge" icon="light-bulb"></core-icon>
+
+                    </div>
+                    <!--<span class="medium-text">Top tip: Create and emergency fund</span>
+                    <p>The car breaks down. You lose your job. A family member needs help.Life is unexpected.</p>
+                    <p>All good money managers have an emergency fund so they can sleepbetter at night.
+                       It’s just another kind of insurance, for the little things.Learn how to create an emergency fund for yourself,
+                        to help youwhen things go wrong.
+                    </p>-->
+                </div>
+                <div class="orange-theme tile-bottom" page="4" hero-id="tips-footer" hero on-tap="{{transition}}">
+                    View more tips
+                    <core-icon class="right" icon="chevron-right"></core-icon>
+                </div>
+            </div>
+            <div class="tile" layout vertical hasFooter>
+                <div class="inner" flex vertical layout hero hero-id="transactions">
+                    <div flex>
+                        <span class="dark-grey medium-text">Recent Transactions</span>
+                        <table cellspacing="0" class="transactions">
+                            <thead>
+                            <tr>
+                                <th class="date">Date</th>
+                                <th class="description">Description</th>
+                                <th class="category">Category</th>
+                                <th class="amount">Amount</th>
+                                <th class="taxable">Taxable</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>09/10/2014</td>
+                                <td>7-eleven</td>
+                                <td>Groceries</td>
+                                <td>-$11.69</td>
+                                <td><paper-checkbox class="blue"></paper-checkbox></td>
+                            </tr>
+                            <tr>
+                                <td>09/10/2014</td>
+                                <td>BWS Liquor</td>
+                                <td>Groceries</td>
+                                <td>-$14.50</td>
+                                <td><paper-checkbox class="blue"></paper-checkbox></td>
+                            </tr>
+                            <tr>
+                                <td>09/10/2014</td>
+                                <td>Transfield Services</td>
+                                <td>Business expense</td>
+                                <td>-$31.50</td>
+                                <td><paper-checkbox class="blue"></paper-checkbox></td>
+                            </tr>
+                            <tr>
+                                <td>09/10/2014</td>
+                                <td>Hudsons Coffee</td>
+                                <td>Restaurants/dining</td>
+                                <td>-$9.50</td>
+                                <td><paper-checkbox class="blue"></paper-checkbox></td>
+                            </tr>
+                            <tr>
+                                <td>09/10/2014</td>
+                                <td>Office World</td>
+                                <td>Business expense</td>
+                                <td>-$34.00</td>
+                                <td><paper-checkbox class="blue" checked></paper-checkbox></td>
+                            </tr>
+                            <tr>
+                                <td>08/10/2014</td>
+                                <td>Express</td>
+                                <td>Clothing/shoes</td>
+                                <td>-$31.50</td>
+                                <td><paper-checkbox class="blue"></paper-checkbox></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="blue-theme tile-bottom" page="2" hero-id="transactions-footer" hero on-tap="{{transition}}">
+                    Analyse your purchases
+                    <core-icon class="right" icon="chevron-right"></core-icon>
+                </div>
+            </div>
+            <div class="tile" layout vertical>
+                <div class="inner" flex vertical layout>
+                    <span class="dark-grey medium-text" style="padding: 10px">Spend by category</span>
+                    <div class="centered" flex>
+                        <chart-doughnut width="200" height="200" values="[15, 30, 35, 20]" colors="['#23a0e2', '#198bc7', '#157db0', '#0c5f89']"></chart-doughnut>
+                        <ul>
+                            <li>Entertainment</li>
+                            <li>Utilities</li>
+                            <li>Rent</li>
+                            <li>Other</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script>
+        Polymer('daily-view', {
+            tablet: false,
+            mobile: false
+        })
+    </script>
+</polymer-element>
