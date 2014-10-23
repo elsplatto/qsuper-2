@@ -1,0 +1,197 @@
+<link href="../core-scroll-header-panel/core-scroll-header-panel.html" rel="import">
+<link href="../core-toolbar/core-toolbar.html" rel="import">
+<link href="../core-selector/core-selector.html" rel="import">
+<link href="../core-media-query/core-media-query.html" rel="import">
+
+<link rel="import" href="../core-icons/core-icons.html">
+<link rel="import" href="../core-icon-button/core-icon-button.html">
+<link rel="import" href="../paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../core-icons/av-icons.html">
+
+<link rel="import" href="../core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../core-animated-pages/transitions/slide-up.html">
+<link rel="import" href="../core-animated-pages/transitions/scale-up.html">
+<link rel="import" href="../core-animated-pages/transitions/tile-cascade.html">
+
+<link rel="import" href="../app-drawer/app-drawer.html" />
+
+<script src="../../js/app.js"></script>
+<script src="../../js/dynamics.js"></script>
+
+
+
+<polymer-element name="qsuper-app-2">
+    <template>
+        <link rel="stylesheet" href="qsuper-app-2.css?v=123" />
+
+        <app-drawer id="sidebar">
+            <div id="drawer-content">
+                Nav bar
+            </div>
+        </app-drawer>
+
+        <core-scroll-header-panel id="headerPanel" headerHeight="{{headerHeight}}" condensedHeaderHeight="{{tablet ? '80' : '220'}}" condenses tablet?="{{tablet}}">
+
+            <core-toolbar id="toolbar" class="tall">
+
+                <div class="top" id="utilBar">
+                    <div class="container">
+                        <div class="inner" flex>
+                            <paper-icon-button icon="menu" on-tap="{{togglePanel}}"></paper-icon-button>
+                            <div id="logoContainer">
+                                <h1>QSuper</h1>
+                            </div>
+
+                            <div id="utilityContainer">
+                                <div class="notifications-holder">
+                                    <div class="notifications">
+                                        <span>5</span>
+                                    </div>
+                                    <div class="indicator"></div>
+                                </div>
+                                <div class="support">
+                                    <core-icon-button id="supportIcon" icon="info"></core-icon-button>
+                                    <a>Support</a>
+                                </div>
+                                <div class="profile-holder">
+                                    <div class="profile-pic">
+                                        <img src="../../img/users/nicole-42x42.jpg" />
+                                    </div>
+                                    <a>Nicole Braidlin</a>
+                                    <core-icon icon="arrow-drop-down"></core-icon>
+                                </div>
+                            </div>
+                            <div flex></div>
+                            <paper-icon-button id="utilityButton" icon="more-horiz" on-tap="{{toggleUtility}}"></paper-icon-button>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="container">
+                        <div class="primary-nav">
+                            <div class="inner">
+                                <ul>
+                                    <core-selector id="primarySelector" on-core-activate="{{selectSecondary}}">
+                                        <li data-index="0"><a>Your Super</a><span></span></li>
+                                        <li data-index="1"><a>Your Finances</a><span></span></li>
+                                        <li data-index="2"><a>Investments</a><span></span></li>
+                                        <li data-index="3"><a>Add to Super</a><span></span></li>
+                                        <li data-index="4"><a>Accessing Super</a><span></span></li>
+                                        <li data-index="5"><a>Insurance</a><span></span></li>
+                                    </core-selector>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="secondaryNav" class="secondary-nav">
+                            <div class="inner">
+                                <core-selector id="secondarySelector">
+                                    <ul>
+                                        <li><a href="#">Secondary nav one</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">Daily View</a></li>
+                                        <li><a href="#">Budgets &amp; Bills</a></li>
+                                        <li><a href="#">Savings &amp; Goals</a></li>
+                                        <li><a href="#">Investment &amp; Advice</a></li>
+                                        <li><a href="#">Portfolio</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">Secondary nav three</a></li>
+                                    </ul>
+                                </core-selector>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="bottom">
+                    <div class="container">
+                        <div class="inner">
+                            <header>
+                                <h2 id="titleHeader">Title</h2>
+                            </header>
+                        </div>
+                    </div>
+                    <div id="dropShadow"></div>
+                </div>
+            </core-toolbar>
+
+            <div class="content" style="height: 4000px">
+
+                <p style="position: relative;color: black">jkldsfkljdsfkjldfskjl</p>
+                <p style="color: black">jkldsfkljdsfkjldfskjl</p>
+                <p style="color: black">jkldsfkljdsfkjldfskjl</p>
+                <p style="color: black">jkldsfkljdsfkjldfskjl</p>
+                <p style="color: black">jkldsfkljdsfkjldfskjl</p>
+
+            </div>
+        </core-scroll-header-panel>
+        <core-media-query query="max-width: 900px" queryMatches="{{tablet}}"></core-media-query>
+    </template>
+    <script>
+    (function(){
+        var utilityNavVisible = false;
+        var secondaryNavVisible = false;
+        Polymer('qsuper-app-2',{
+            pageTitle: 'Daily View',
+            headerHeight: 306,
+            condensedHeaderHeight: 220,
+            //secondaryNavVisible: false,
+            //utilityNavVisible: false,
+            ready: function() {
+                this.utilityNavVisible = utilityNavVisible;
+                this.secondaryNavVisible = secondaryNavVisible;
+            },
+            togglePanel: function() {
+                this.$.sidebar.toggle();
+            },
+            toggleUtility: function() {
+                if (this.utilityNavVisible) {
+                    this.utilityNavVisible = false;
+                }
+                else
+                {
+                    this.utilityNavVisible = true;
+                }
+            },
+            selectSecondary: function(event, detail, sender) {
+                this.$.secondarySelector.selected = detail.item.getAttribute('data-index');
+                this.secondaryNavVisible = true;
+                this.$.headerPanel.classList.add('secondNavVisible');
+                var headerPanel = this.$.headerPanel;
+                setTimeout(function(){
+                    headerPanel.measureHeaderHeight();
+                }, 500);
+
+            },
+            observe: {
+                secondaryNavVisible: 'adjust',
+                utilityNavVisible: 'toggleUtilityNav'
+            },
+            adjust: function(oldValue, newValue)
+            {
+                if (newValue) {
+                    headerHeight = 378;
+                }
+                else
+                {
+                    headerHeight = 306;
+                }
+            },
+            toggleUtilityNav: function(oldValue, newValue) {
+                if (newValue) {
+                    this.$.utilityContainer.classList.add('show');
+                }
+                else
+                {
+                    this.$.utilityContainer.classList.remove('show');
+                }
+            }
+
+        });
+    })();
+    </script>
+
+</polymer-element>

@@ -1,0 +1,505 @@
+@import ../../css/global
+
+app-drawer
+  display: none
+
+core-toolbar
+  .inner
+    paper-icon-button
+      display: none
+
+core-scroll-header-panel
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  core-toolbar
+    background-color: #fff
+    .top
+      margin: 0 auto
+      width: 100%
+      height: 78px
+      padding: 0
+      background-color: #fff
+      display: -webkit-box
+      display: -webkit-flex
+      display: -moz-flex
+      display: -moz-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-align-items: center
+      align-items: center
+      border-bottom: 1px solid $light-grey
+      .container
+        width: $desktop-width //948px
+        padding: 0 36px
+        margin: 0 auto
+        display: -webkit-box
+        display: -webkit-flex
+        display: -moz-flex
+        display: -moz-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-align-items: center
+        align-items: center
+        position: relative
+        .inner
+          display: -webkit-box
+          display: -webkit-flex
+          display: -moz-flex
+          display: -moz-box
+          display: -ms-flexbox
+          display: flex
+          flex-direction: row
+          #logoContainer
+            display: -webkit-box
+            display: -webkit-flex
+            display: -moz-flex
+            display: -moz-box
+            display: -ms-flexbox
+            display: flex
+            width: 25%
+            -webkit-justify-content: flex-start
+            justify-content: flex-start
+            flex-direction: row
+            h1
+              padding: 0
+              margin: 0
+              width: 133px
+              height: 44px
+              text-indent: -10000px
+              background-image: url(../../css/img/blue-logo.png)
+              background-repeat: no-repeat
+          #utilityContainer
+            display: -webkit-box
+            display: -webkit-flex
+            display: -moz-flex
+            display: -moz-box
+            display: -ms-flexbox
+            display: flex
+            width: 75%
+            -webkit-justify-content: flex-end
+            justify-content: flex-end
+            flex-direction: row
+            .notifications-holder
+              display: -webkit-box
+              display: -webkit-flex
+              display: -moz-flex
+              display: -moz-box
+              display: -ms-flexbox
+              display: flex
+              position: relative
+              padding: 0 1.2rem
+              width: auto
+              -webkit-align-items: center
+              align-items: center
+              .notifications
+                position: relative
+                display: -webkit-box
+                display: -webkit-flex
+                display: -moz-flex
+                display: -moz-box
+                display: -ms-flexbox
+                display: flex
+                -webkit-align-items: center
+                align-items: center
+                color: #fff
+                -webkit-justify-content: center
+                justify-content: center
+                font-size: 0.83rem
+                width: 24px
+                height: 26px
+                background-color: $dark-blue
+                -webkit-mask-image: url(../../css/img/speech-bubble.png)
+                -webkit-mask-repeat: no-repeat
+                mask-image: url(../../css/img/speech-bubble.png)
+                mask-repeat: no-repeat
+                border-right: 1px solid $light-grey
+                span
+                  padding-bottom: 0.1rem
+              .indicator
+                width: 0.3rem
+                height: 0.3rem
+                border: 1px solid transparent
+                border-radius: 50%
+                position: absolute
+                top: 0.5rem
+                right: 0.43rem
+                background-color: $light-orange
+            .support
+              display: -webkit-box
+              display: -webkit-flex
+              display: -moz-flex
+              display: -moz-box
+              display: -ms-flexbox
+              display: flex
+              color: $mid-grey
+              padding: 0 1.2rem
+              font-size: 0.9rem
+              line-height: 2rem
+              border-right: 1px solid $light-grey
+              border-left: 1px solid $light-grey
+              -webkit-align-items: center
+              align-items: center
+              core-icon-button, paper-icon-button
+                display: none
+            .profile-holder
+              display: -webkit-box
+              display: -webkit-flex
+              display: -moz-flex
+              display: -moz-box
+              display: -ms-flexbox
+              display: flex
+              padding: 0 1.2rem
+              -webkit-align-items: center
+              align-items: center
+              width: auto
+              a
+                color: $mid-grey
+                font-size: 0.9rem
+                padding: 0 0.5rem
+              core-icon
+                color: $dark-blue
+              .profile-pic
+                -webkit-mask-image: url(../../css/img/speech-bubble.png)
+                -webkit-mask-size: 36px 38px
+                -webkit-mask-repeat: no-repeat
+                img
+                  width: 38px
+                  height: 38px
+                  display: block
+
+    .middle
+      height: 71px
+      position: absolute
+      top: 78px
+      margin: 0 auto
+      width: 100%
+      padding: 0
+      background-color: #fff
+      display: block
+      border-bottom: 1px solid $light-grey
+      .container
+        width: 100%
+        display: block
+        .primary-nav
+          display: -webkit-box
+          display: -webkit-flex
+          display: -moz-flex
+          display: -moz-box
+          display: -ms-flexbox
+          display: flex
+          .inner
+            display: -webkit-box
+            display: -webkit-flex
+            display: -moz-flex
+            display: -moz-box
+            display: -ms-flexbox
+            display: flex
+            width: $desktop-width
+            height: 100%
+            -webkit-align-items: center
+            align-items: center
+            -webkit-justify-content: space-between
+            justify-content: space-between
+            margin: 0 auto
+            ul
+              display: -webkit-box
+              display: -webkit-flex
+              display: -moz-flex
+              display: -moz-box
+              display: -ms-flexbox
+              display: flex
+              width: 100%
+              height: 100%
+              -webkit-align-items: center
+              align-items: center
+              list-style: none
+              margin: 0
+              padding: 0
+              core-selector
+                height: 100%
+                li
+                  display: -webkit-box
+                  display: -webkit-flex
+                  display: -moz-flex
+                  display: -moz-box
+                  display: -ms-flexbox
+                  display: flex
+                  position: relative
+                  float: left
+                  white-space: nowrap
+                  height: 100%
+                  line-height: 2rem
+                  -webkit-align-items: center
+                  align-items: center
+                  &:first-child
+                    a
+                      padding: 0 20px 0 0
+                  &:last-child
+                    a
+                      border-right: none
+                  a
+                    display: -webkit-box
+                    display: -webkit-flex
+                    display: -moz-flex
+                    display: -moz-box
+                    display: -ms-flexbox
+                    display: flex
+                    width: 100%
+                    font-size: 1rem
+                    color: $dark-grey
+                    text-decoration: none
+                    padding: 0 20px
+                    border-right: 1px solid $light-grey
+                .core-selected
+                  a
+                    color: $dark-blue
+                .core-selected
+                  span
+                    position: absolute
+                    bottom: 0
+                    left: 50%
+                    margin-left: -5px
+                    width: 0
+                    height: 0
+                    border-left: 5px solid transparent
+                    border-right: 5px solid transparent
+                    border-bottom: 5px solid $dark-blue
+
+        .primary-nav, .secondary-nav
+          margin: 0 auto
+          width: 100%
+          margin: 0 auto
+          display: block
+          width: 100%
+        .primary-nav
+          height: 72px
+
+
+      .secondary-nav
+        display: none
+        height: 0px
+        background-color: $dark-blue
+        .inner
+          -webkit-align-items: center
+          align-items: center
+          -webkit-justify-content: space-between
+          justify-content: space-between
+          width: $desktop-width
+          margin: 0 auto
+          core-selector
+            ul
+              display: none
+            ul.core-selected
+              display: -webkit-box
+              display: -webkit-flex
+              display: -moz-flex
+              display: -moz-box
+              display: -ms-flexbox
+              display: flex
+              width: 100%
+              height: 72px
+              -webkit-align-items: center
+              align-items: center
+              list-style: none
+              margin: 0
+              padding: 0
+              li
+                display: -webkit-box
+                display: -webkit-flex
+                display: -moz-flex
+                display: -moz-box
+                display: -ms-flexbox
+                display: flex
+                position: relative
+                float: left
+                white-space: nowrap
+                height: 100%
+                line-height: 2rem
+                -webkit-align-items: center
+                align-items: center
+                &:first-child
+                  a
+                    padding: 0 20px 0 0
+                &:last-child
+                  a
+                    border-right: none
+                a
+                  text-decoration: none
+                  padding: 0 20px
+                  font-size: 1rem
+                  color: #fff
+                  border-right: 1px solid $blue
+
+
+    .bottom
+      display: -webkit-box
+      display: -webkit-flex
+      display: -moz-flex
+      display: -moz-box
+      display: -ms-flexbox
+      display: flex
+      height: 9.75rem
+      color: #fff
+      margin: 0 auto
+      width: 100%
+      padding: 0
+      background-color: $blue
+      -webkit-align-items: center
+      align-items: center
+      .container
+        width: $desktop-width //948px
+        padding: 0 36px
+        margin: 0 auto
+        display: block
+        position: relative
+        .inner
+          display: -webkit-box
+          display: -webkit-flex
+          display: -moz-flex
+          display: -moz-box
+          display: -ms-flexbox
+          display: flex
+          flex-direction: row
+          header
+            h2
+              font-weight: 300
+              font-size: 2.5rem
+
+.secondNavVisible
+  core-toolbar
+    height: 378px
+    transition: height 0.2s
+    .middle
+      height: 143px
+      transition: height 0.2s
+      .secondary-nav
+        margin: 0 auto
+        display: block
+        width: 100%
+        height: 72px
+        transition: height 0.2s
+
+#dropShadow
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  height: 6px
+  box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4)
+  background-color: #fff
+
+core-scroll-header-panel[tablet]
+  core-toolbar
+    background-color: $blue
+    color: #fff
+    height: 130px
+    .top
+      background-color: inherit
+      border-bottom: none
+
+      .container
+        width: 100%
+        padding: 0
+        .inner
+          #logoContainer
+            display: none
+          paper-icon-button
+            display: block
+            width: 30px
+            height: 30px
+            margin: 0 !important
+          paper-icon-button[icon="more-horiz"]
+            core-icon
+              width: 30px
+              height: 30px
+          #utilityContainer
+            width: 180px
+            -webkit-justify-content: flex-start
+            justify-content: flex-start
+            position: absolute
+            right: -80%
+            top: 0.5rem
+            transition: right 0.2s
+            .notifications-holder, .support
+              padding: 0
+              width: 37px
+            .notifications-holder
+              .notifications
+                background-color: #fff
+                span
+                  color: $blue
+              .indicator
+                top: 0.1rem
+                right: 0.75rem
+            .support
+              border-right: none
+              border-left: none
+              core-icon-button
+                display: block
+                color: #fff
+                width: 30px
+                height: 30px
+                padding: 0
+                margin: -5px 0 0 0
+              core-icon-button::shadow core-icon
+                width: 30px
+                height: 30px
+              a
+                display: none
+            .profile-holder
+              padding: 0 0 0 5px
+              .profile-pic
+                -webkit-mask-image: url('../../css/img/speech-bubble.png')
+                -webkit-mask-size: 30px 32px
+                -webkit-mask-repeat: no-repeat
+                img
+                  width: 30px
+                  height: 30px
+              a
+                display: none
+
+              core-icon
+                color: #fff
+          #utilityContainer.show
+            right: 0
+
+    .middle
+      display: none
+    .bottom
+      height: 100%
+      .container
+        width: 100%
+        padding: 0
+        .inner
+          -webkit-align-items: center
+          align-items: center
+          paper-icon-button::shadow core-icon
+            width: 30px
+            height: 30px
+          header
+            padding-left: 40px
+            margin-bottom: 10px
+            h2
+              font-weight: 300
+              font-size: 2.8rem
+              padding: 0
+              margin: 0
+
+  .shrink
+    .bottom
+      .container
+        .inner
+          header
+            padding-left: 30px
+            padding-top: 60px
+            h2
+              transform: scale(0.6)
+              -webkit-transform: scale(0.6)
+              position: absolute
+              top: 5px
+.content
+  padding: 8px
+  background-color: #fff

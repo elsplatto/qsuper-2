@@ -1,0 +1,71 @@
+/*
+ * @license
+ * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+ */
+
+@import "elements";
+
+:host {
+  display: block;
+}
+
+#mainmenu {
+  $leftPadding: 16px;
+  display: block;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 $leftPadding;
+  margin: 0;
+}
+
+core-menu > core-submenu::shadow core-item {
+  color: inherit;
+}
+
+core-submenu /deep/ core-item,
+core-item {
+  font-size: 14px !important;
+  font-weight: 500;
+  line-height: 32px !important;
+  // letter-spacing: 0.01em;
+  padding: 0;
+  color: initial;
+  opacity: 0.5;
+}
+
+core-submenu /deep/ core-item:hover,
+core-item:hover {
+  opacity: 0.9;
+}
+
+core-submenu /deep/ core-item[active],
+core-item[active],
+core-submenu /deep/ core-item.core-selected,
+core-item.core-selected {
+  opacity: 1;
+  font-weight: 500 !important;
+}
+
+:host /deep/ #menu {
+  margin-left: 34px;
+}
+
+core-submenu core-submenu /deep/ #menu {
+  margin-left: 24px;
+}
+
+:host /deep/ core-icon {
+  // margin-right: 12px !important;
+  height: 20px !important;
+  width: 20px !important;
+}
+
+core-item a {
+  color: currentcolor;
+  text-decoration: none;
+}

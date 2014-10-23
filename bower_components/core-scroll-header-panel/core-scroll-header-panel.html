@@ -71,7 +71,8 @@ or class `content` to delineate the content section.
     </div>
     
     <content id="headerContent" select="core-toolbar, .core-header"></content>
-    
+
+
   </div>
   
 </template>
@@ -224,6 +225,7 @@ or class `content` to delineate the content section.
       if (header && header.offsetHeight) {
         this.headerHeight = header.offsetHeight;
       }
+        //alert('hello')
     },
     
     headerHeightChanged: function() {
@@ -241,6 +243,7 @@ or class `content` to delineate the content section.
       if (this.headerHeight) {
         this.headerMargin = this.headerHeight - this._condensedHeaderHeight;
       }
+
     },
     
     condensesChanged: function() {
@@ -270,6 +273,7 @@ or class `content` to delineate the content section.
       if (this.condenses) {
         this.condenseHeader(y);
       }
+
       
       this.fire('core-header-transform', {y: y, height: this.headerHeight, 
           condensedHeight: this._condensedHeaderHeight});
@@ -308,7 +312,7 @@ or class `content` to delineate the content section.
       if (!this.header) {
         return;
       }
-      
+
       var sTop = this.scroller.scrollTop;
       
       var y = Math.min(this.keepCondensedHeader ? 
@@ -325,6 +329,19 @@ or class `content` to delineate the content section.
       
       this.prevScrollTop = Math.max(sTop, 0);
       this.y = y;
+
+      //console.log('header margin: ' + this.headerMargin);
+      //console.log('header height: ' + this.headerHeight);
+
+      if ((sTop + 40) >= this.headerMargin) {
+        //console.log('scroll top: ' + sTop + ' header margin: ' + this.headerMargin);
+        this.header.classList.add('shrink');
+      }
+      else
+      {
+        this.header.classList.remove('shrink');
+
+      }
       
       if (event) {
         this.fire('scroll', {target: this.scroller}, this, false);

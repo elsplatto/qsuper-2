@@ -31,13 +31,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 }
 
 :host(.tall) {
-  height: 192px;
+  height: 306px;
 }
+
 
 .toolbar-tools {
   position: relative;
-  height: 64px;
-  padding: 0 8px;
+  height: auto;
+  padding: 0;
   pointer-events: none;
 }
 
@@ -113,5 +114,5 @@ polyfill-next-selector { content: '.toolbar-tools > .fit'; }
 
 polyfill-next-selector { content: ':host .indent'; }
 ::content > .indent {
-  margin-left: 60px;
+  margin-left: 40px;
 }

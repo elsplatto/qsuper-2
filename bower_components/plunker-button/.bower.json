@@ -1,0 +1,26 @@
+{
+  "name": "plunker-button",
+  "version": "0.4.1",
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components"
+  ],
+  "main": "plunker-button.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.4.2",
+    "paper-button": "Polymer/paper-button#^0.4.2",
+    "core-icons": "Polymer/core-icons#^0.4.2",
+    "native-promise-only": "^0.7.5-e"
+  },
+  "homepage": "https://github.com/robdodson/plunker-button",
+  "_release": "0.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.4.1",
+    "commit": "9da4782bad273e7b8c69daca94f05797366ade1a"
+  },
+  "_source": "git://github.com/robdodson/plunker-button.git",
+  "_target": "^0.4.1",
+  "_originalSource": "robdodson/plunker-button"
+}

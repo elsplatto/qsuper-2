@@ -24,6 +24,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   overflow-y: auto;
+  transition: padding-top 0.2s;
+  -webkit-transition: padding-top 0.2s;
 }
 
 #headerContainer {

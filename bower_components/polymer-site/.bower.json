@@ -1,0 +1,40 @@
+{
+  "name": "polymer-site",
+  "homepage": "https://github.com/Polymer/docs",
+  "authors": [
+    "Eric Bidelman <ebidel@gmail.com>"
+  ],
+  "description": "Polymer website",
+  "keywords": [
+    "polymer",
+    "web components",
+    "documentation"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "smoothscroll": "~0.0.2",
+    "x-tag-imports": "x-tag/x-tag-imports",
+    "marked": "*",
+    "highlightjs": "*",
+    "plunker-button": "robdodson/plunker-button#^0.4.1",
+    "topeka": "Polymer/topeka"
+  },
+  "_release": "4209ab6e0a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4209ab6e0ab24d5e529723c6de90f626f24fff92"
+  },
+  "_source": "git://github.com/Polymer/docs.git",
+  "_target": "*",
+  "_originalSource": "Polymer/docs",
+  "_direct": true
+}
